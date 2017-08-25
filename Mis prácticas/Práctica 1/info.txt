@@ -1,0 +1,6 @@
+Fichero para leer datos de decsai:
+
+- Donde pone "leido", poner "valor"
+
+(if (neq ?Leido EOF) then
+(assert (ValorCierre ?Leido (read mydata)))

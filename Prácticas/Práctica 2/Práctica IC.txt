@@ -1,0 +1,166 @@
+El programa empieza, muestra un menu con 3 opciones:
+1. Recomendación de licencia.
+	1.1: Preguntas del apartado 1.
+2. Asesoramiento de compatibilidad. 
+	2.1: ¿Que caracteristicas tiene tu programa?
+	2.2: ¿Que caracteristicas tiene la libreria que quieres usar?
+3.
+	3.1:
+
+
+
+
+
+
+
+
+1. Adquisicion de conocimiento con herramientas semiautomáticas/estructuradas/formales.
+2. Adquisición totalmente automática.
+3. Adquisición manual del conocimiento.
+
+
+
+
+
+
+
+
+1. Crear rejilla de repertorio. A partir de esto, extraer reglas y ponerlas en clips.
+
+2. Extraer reglas automaticamente con R.
+
+3. Extraer reglas del experto.
+
+
+
+
+
+
+
+
+
+
+1. Rejilla de repertorio:
+- nosotros actuamos como propios expertos y a partir del enlace que tenemos de las licencias, creamos la rejilla que refleje ese conocmiento.
+Hay información en decsai para crear esa rejilla. El fichero se llama "rejilla de repertorio".
+	1. Se identifican los constructores.
+	2. Se identifican las propiedades y se asignan valores para graduarlas.
+	3. Se ve el árbol que sale de la rejilla.
+	4. A partir de ese árbol se crean las reglas.
+	
+	El salto del arbol a las reglas se hace manualmente.
+	
+	Los individuos de la rejilla son las distintas clases de licencias.
+	
+	
+Al usuario le aparecerá una ventana con las cosas que quiere hacer con su software y según lo que quiere se le de una respuesta:
+- Quieres que el codigo pueda redistribuirse?
+- Quieres permitir uso comercial?
+- ...
+
+
+
+El resultado es la licencias que debe usar.
+
+
+Se entrega la parte del programa correspondiente a tener las reglas y el codigo que lo implementa.
+
+
+
+2. Adquisición automática (las reglas se generan automáticamente):
+
+Se está realizando un programa y se está incorporando una librería externa que tiene una licencia concreta.
+Al incorporar librerías externas, nos fuerzan a que nuestro programa tenga una licencia en concreto.
+
+Quiere decir si la licencia que tenemos y la de la librería son compatibles.
+
+Cogería la licencia más restrictiva de entre todas las posibles.
+
+
+
+
+Se va a montar una tabla que va a tener 3 partes.
+
+Características del software			| Caracteristicas de las bibliotecas externas	| Son compatibles?	|
+--------------------------------------------------------------------------------------------------
+Redistribucion	| Uso comercial	| ......	| Redistribucion| uso comercial| integrar | ...	| 			|
+1		| 0		| ...		| 1		| 1		|		|	no		|
+1		| 1		| ....		| 1		| 1		|	  |	| 	si		|
+
+Habrá que poner más de 20 filas
+
+
+Con esa tabla, se le pasa al algoritmo de extracción de reglas que hay en R (se usa el script que nos pasó), se le indica
+los datos y genera el arbol con una función o con otra función se obtienen las reglas.
+Esas reglas se adaptan a CLIPS y se usan en la segunda opción del menú.
+
+
+El programa preguntará las características de nuestro programa, después preguntará las características
+de la libreria que se quiere utilizar y dirá si hay compatibilidad.
+
+
+
+En el codigo que nos da en R hay una segunda parte, en esa parte monta una tabla como la que tenemos que hacer, para simular que se tiene una tabla como la nuestra.
+
+
+
+Se harán tantas preguntas como características tenga nuestro programa y la librería.
+
+
+
+
+Habrá reglas raras que salgan del arbol. Tenemos que ser capaces de identificar las reglas raras que salgan.
+
+
+
+La respuesta es si es compatible o no es compatible.
+
+
+
+
+Es bueno poner la tabla y los pasos que hemos dado para obtener todas las reglas.
+Le interesa que le expliquemos si se ha quitado alguna regla.
+
+
+
+
+3.
+
+Privacidad y protección de datos
+
+
+
+Hay que ofrecer a los usuarios que vean sus datos, modifiquen, borren, etc
+
+
+Hay que implementar una serie de pasos:
+a. Preguntar que tipo de datos son los que se manejan en un programa.
+b. Descripcion adicional de los datos.
+c. Determinar si hay riesgo en temas de privacidad o proteccion de datos
+
+
+Ciertas combinaciones de datos puede tener ciertos riesgos. Depende de las categorias de 
+datos que hay en cuidatusdatos.com se dará un resultado.
+
+d. Deducir las medidas que hay que tomar. Conectar datos que provocan riesgo con medidas. Las medidas suelen ser las mismas siempre.
+En las medidas poner que articulos de la ley obligan a hacer eso. Si no se encuentra claro en que articulos estan, no se ponen.
+e. Generar los derechos ARCO. Son 3 o 4 ficheros. Las medidas son que los usuarios puedan obtener los datos, puedan rectificar, puedan eliminar.
+Se lee la plantilla, se leen los datos de quien pide los datos y devolver el resultado de combinar esa informacion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

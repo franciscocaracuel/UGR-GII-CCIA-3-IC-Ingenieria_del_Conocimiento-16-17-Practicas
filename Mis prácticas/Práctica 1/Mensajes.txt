@@ -1,0 +1,7 @@
+A "Esta es la primera línea y tiene la etiqueta A."
+B "Esta es la segunda línea y tiene la etiqueta B."
+E "Esta es la tercera línea y tiene la etiqueta E."
+L "Esta es la cuarta línea y tiene la etiqueta L."
+M "Esta es la quinta línea y tiene la etiqueta M."
+O "Esta es la sexta línea y tiene la etiqueta O."
+P "Esta es la séptima línea y tiene la etiqueta P."
